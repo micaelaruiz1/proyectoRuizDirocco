@@ -85,8 +85,14 @@ input {
     justify-content: space-between;
     width: 100vw;
 }
+.nav-vertical {
+    width: 20%;
+}
 
-
+.catalogo {
+    display: flex;
+    
+}
 .top {
     color: #EAD2AC;
     font-family: "Work Sans", sans-serif;
