@@ -21,16 +21,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
 }
 .section-header1 {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 100vw;                    
 }
 .espacio-logo {
-    width: 5%;
+    width: 5%; 
     margin: 1% 1% 1% 0;
 }
 .logo {
@@ -40,8 +39,8 @@ header {
     object-fit: cover;
 }
 .navegacion-horizontal {
-    margin: 1% 0;
     width: 48%;
+    margin: 1% 0;
 }
 .ul1 {
     display: flex;
@@ -54,7 +53,7 @@ header {
     text-align: center;
     color:#2C1810;
     background-color:#EAD2AC ;
-    padding: 3px 8px 3px 8px;
+    padding: 3px 8px;
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
     border-radius: 8px;
@@ -78,8 +77,8 @@ input {
     background-color:rgba(44, 24, 16, 0.5);
     padding: 5px 30px 5px 30px;
     border-radius: 8px;
-    width: 17%;
-    margin-left: 20px;
+    width: 29%;
+    margin-left: 30px;
 }
 .li2 {
     color: #EAD2AC;
