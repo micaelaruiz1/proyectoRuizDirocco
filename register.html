@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href='./css/style.css'>
+
 </head>
 <body>
     <header>
@@ -31,7 +33,7 @@
         </section>
     </header>
     
-    <main>
+    <main class="main-catalogo">
         <nav class="nav-vertical">
             <ul class="ul2">
                 <li class="li2">Cafe en granos/ molido/ capsulas</li>
@@ -58,23 +60,27 @@
                 <li class="li2">Sobre nosotros</li>
             </ul>
         </nav>
-        <form action="" method="get">
+
+        
+        <form class="form-register" action="./login.html" method="get">
             <label class="titulo" for="email">Email</label>
             <input class="cajita" type="email" name="email" id="email" placeholder="Email" required>
-            <p class="obligatorio">Obligatorio</p>
+            <p class="obl">Obligatorio</p>
 
             <label class="titulo" for="password">Password</label>
             <input class="cajita" type="password" name="password" id="password" placeholder="Password" required>
-            <p class="obligatorio">Obligatorio</p>
+            <p class="obl">Obligatorio</p>
 
-            <label class="titulo" for="repeat-password">Password</label>
-            <input class="cajita" type="repeat-password" name="repeat-password" id="Repeat-password" placeholder="Repeat-password" required>
-            <p class="obligatorio">Obligatorio</p>
+            <label class="titulo" for="repeat-password">Repetir password</label>
+            <input class="cajita" type="repeat-password" name="repeat-password" id="Repeat-password" placeholder="Repetir password" required>
+            <p class="obl">Obligatorio</p>
 
             <label class="terminos" for=""> <input type="checkbox" name="terminos" id="terminos">Acepto los terminos y condiciones</label>
 
-            <button class="submit" type="submit">Registrarme</button>
-            <a href="./login.html">Ya tengo una cuenta</a>
+            <section class="button">
+                <button class="submit" type="submit">Registrarme</button>
+                <a href="./login.html">Ya tengo una cuenta</a>
+            </section>
         </form>
     </main>
 
