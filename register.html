@@ -10,27 +10,31 @@
 <body>
     <header>
         <section class="section-header1">
-            <div class="espacio-logo">
-            <a href="index.html"><img class="logo" src="./img/logo4.jpg" alt=""></a>
+            <div class="logo-nombre">
+                <div class="espacio-logo">
+                <a href="index.html"><img class="logo" src="./img/logo-centralperk.jpg" alt=""></a>
+                </div>
+                <h1>CENTRAL PERK</h1>
             </div>
         
             <form class="formulario" action="">
-                <input type="text" name="busqueda" placeholder="">
-                <button type="submit">Buscar</button>
+                <input class="busq-header" type="text" name="busqueda" placeholder="">
+                <button class="boton-header" type="submit">Buscar</button>
             </form>
 
             <nav class="navegacion-horizontal">
                 <ul class="ul1">
-                    <li class="li1"><a href="./index.html">Home</a></li>
-                    <li class="li1"><a href="./login.html">Login</a></li>
-                    <li class="li1"><a href="./register.html">Registro</a></li>
+                    <li><a class="li1" href="./index.html">Home</a></li>
+                    <li><a class="li1" href="./login.html">Login</a></li>
+                    <li><a class="li1" href="./register.html">Registro</a></li>
                 </ul>
           </nav>
         </section>
         
         <section class="section-banner">
-            <img class="banner" src="./img/cafe-corazon.jpg" alt="">
+            <img class="banner" src="./img/banner-centralperk.jpg" alt="">
         </section>
+
     </header>
     
     <main class="main-catalogo">
@@ -75,11 +79,11 @@
             <input class="cajita" type="repeat-password" name="repeat-password" id="Repeat-password" placeholder="Repetir password" required>
             <p class="obl">Obligatorio</p>
 
-            <label class="terminos" for=""> <input type="checkbox" name="terminos" id="terminos">Acepto los terminos y condiciones</label>
+            <label class="obl" for=""> <input type="checkbox" name="terminos" id="terminos">Acepto los terminos y condiciones</label>
 
             <section class="button">
                 <button class="submit" type="submit">Registrarme</button>
-                <a href="./login.html">Ya tengo una cuenta</a>
+                <a class="obl" href="./login.html">Ya tengo una cuenta</a>
             </section>
         </form>
     </main>
