@@ -28,7 +28,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100vw; 
+    width: 100%; 
 }
 .logo-nombre {
     display: flex;
@@ -37,20 +37,20 @@ header {
     width: 33%;
 }
 .espacio-logo {
-    width: 12%; 
-    margin: 1.2% 1.1% 1.1% 1.1%;
+    width: 16.5%; 
+    align-self: center;
+    margin-right: 2px;
 }
 .logo {
     width: 100%;    
     height: auto;    
-    border-radius: 50%; 
+    border-radius: 20%; 
 }
 h1 {
-    color: white;
-    font-size: 40px;
-    font-family: "Work Sans", sans-serif;
-    margin: 7px 0 0 0;
-
+    color: #D4A373;
+    font-size: 35px;
+    font-family: "Bitter", serif;
+    margin-left: 2px;
 }
 .formulario {
     display: flex;
@@ -58,30 +58,32 @@ h1 {
     justify-content: center;
     width: 30%;
     height: 60px;
-    margin-top: 34px;
 }
 .busq-header {
     width: 65%;
-    height: 43%;
+    height: 40%;
     border-radius: 8px;
     border: none;
+    color: #F5E6CC;
+    background-color: #F5E6CC;
+    align-self: center;
     margin-right: 2px;
+
 }
 .boton-header {
     width: 29%;
     height: 47%;
     border-radius: 8px;
     border: none;
-    background-color:rgba(192, 27, 27, 0.705);
-    color: white;
-    margin-left: 2px;
+    background-color: #1B4D3E;
+    color: #F5E6CC;
     font-family: "Open Sans", sans-serif;
     font-size: auto;
-
+    align-self: center;
+    margin-left: 2px;
 }
 .navegacion-horizontal {
     width: 33%;
-    margin: 1% 0;
 }
 .ul1 {
     display: flex;
@@ -91,14 +93,16 @@ h1 {
 }
 .li1 {
     width: 29%;
+    height: 43%;
     text-align: center;
-    color:white;
-    background-color: rgba(192, 27, 27, 0.705);
+    color:#F5E6CC;
+    background-color: #1B4D3E;
     padding: 3px 22px;
     font-family: "Open Sans", sans-serif;
-    font-size: auto;
+    font-size: 14px;
     border-radius: 8px;
-    margin: 0 2px 0 2px;
+    margin-right: 2px;
+    margin-left: 2px;
 }
 input {  
   border-radius: 6px;          
@@ -115,25 +119,28 @@ input {
     flex-direction: row;
     width: 100vw;
 }
-.ul2 {
-    padding: 20px;
-}
 .li2 {
-    color: #1a4733;
+    color: #2C1810;
     font-family: "Open Sans", sans-serif;
     font-size: 14px;
     margin: 20px;
     font-weight: 700;
 }
+.titulo-categorias {
+    color: #2C1810;
+    font-family: "Bitter", serif;
+    margin: 30px 0 40px 20px;
+}
 .nav-vertical {
+    padding: 20px;
     width: 20%;
-    background-color: #F4E1C6;
+    background-color: #EAD2AC;
     border-radius: 8px;
 }
 .top {
-    color:  #F4E1C6;
-    font-family: "Work Sans", sans-serif;
-    margin-top: 3%;
+    color:  #D4A373;
+    font-family: "Bitter", serif;
+    margin-top: 4%;
 }
 .catalogo {
     display: flex;
@@ -153,12 +160,10 @@ input {
     width: 18.5%;
     margin: 5px 5px 10px 5px;
     height: auto;
-    background-color: #F4E1C6;
     padding: 10px;
-    border: 4px solid #1C3A2D ;
-    background-color: #F4E1C6;
-    border-radius: 8px;
-
+    border: 4px solid  #1B4D3E;
+    background-color: #EAD2AC;
+    border-radius: 12px;
 }
 .imagen-top {
     width: 100%;
@@ -167,8 +172,8 @@ input {
 }
 .titulo-producto {
     color: #2C1810;
-    font-family: "Open Sans", sans-serif;
-    font-size: 13px;
+    font-family: "Roboto Slab", serif;
+    font-size: 14px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -176,18 +181,18 @@ input {
     color: #2C1810;
     margin-top: 2px;
     margin-bottom: 10px;
-    font-size: 13px;
-    font-family: "Open Sans", sans-serif;;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
 }
 .ver-detalle {
-    background-color: #1a4733;
-    color:white;
+    background-color: rgba(192, 27, 27, 0.9);
+    color:#EAD2AC;
     padding: 3px 8px 3px 8px;
     width: 40%;
     text-align: center;
     margin-top: 10px;
     font-size: 13px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto Slab", serif;
     border-radius: 6px;
     
 }
@@ -201,11 +206,11 @@ input {
 .productos-aleatorios {
     width: 23.5%;
     margin: 5px 5px 10px 5px;
-    border: 4px solid #1C3A2D ;
-    background-color: #F4E1C6;
+    border: 4px solid #1B4D3E ;
+    background-color: #EAD2AC;
     height: auto;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 .imagen-aleatorios {
     width: 100%;
@@ -217,7 +222,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     color:#2C1810;
-    background-color: #F4E1C6 ;
+    background-color: #EAD2AC ;
     margin: 40px 5px 0px 5px;
     border-radius: 10px;
     font-family: "Open Sans", sans-serif;
@@ -225,11 +230,11 @@ footer {
 .productos-categoria {
     width: 31%;
     margin: 5px 5px 10px 5px;
-    background-color: #F4E1C6;
+    background-color: #EAD2AC;
     height: auto;
     padding: 10px;
-    border-radius: 8px;
-    border: 4px solid #1C3A2D ;
+    border-radius: 12px;
+    border: 5px solid #1B4D3E ;
 
 }
 .imagen-categorias {
@@ -238,7 +243,7 @@ footer {
     border-radius: 10px;
 }
 .form-register {
-    background-color: #F4E1C6;
+    background-color: #EAD2AC;
     padding: 60px;
     border-radius: 10px;
     display: flex;
@@ -251,23 +256,22 @@ footer {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 15px;
-    color: #1a4733;
+    color: #2C1810;
 }
 .cajita {
-    border: none;
+    border: 3px #F5E6D3;
     height: 30px;
 }
 .obl {
     margin: 0 0 30px 0;
-    font-size: 14px;
+    font-size: 16px;
     color:rgba(192, 27, 27);
 }
 .terminos {
     font-family: "Open Sans", sans-serif;
-    font-weight: 400;
     font-size: 15px;
     margin: 10px 0 10px 0;
-    color: #1a4733;
+    color: #2C1810;
 }
 .button {
     text-align: center;
@@ -277,7 +281,7 @@ footer {
 }
 .submit {
     margin: 30px 200px 10px 200px;
-    background-color: rgba(192, 27, 27);
+    background-color: rgba(192, 27, 27, 0.9);
     color: white;
     border: none;
     padding: 10px 30px 10px 30px;
