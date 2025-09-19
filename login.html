@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Happy+Monkey&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Happy+Monkey&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href='./css/style.css'>
 </head>
 <body>
@@ -72,20 +78,23 @@
        
         <div class="container-form"> 
             <h2 class="top">Iniciar sesión</h2>
-            <form class="form-register" action="./index.html" method="post">
+            <form class="form-register" action="./index.html" method="get">
                 
                 <label class="titulo">Email:</label>
                 <input class="cajita" type="email" name="email" required>
+                <p class="obl">Obligatorio</p>
+
 
                 <label class="titulo" for="password">Contraseña</label>
                 <input class="cajita" type="password" id="password" name="password" required>
+                <p class="obl">Obligatorio</p>
+
                 
                 <section class="button" >
                     <button class="submit" type="submit">Ingresar</button>
+                    <a class="obl" href="./register.html">No tengo cuenta</a>
                 </section>
-                <a class="obl" href="./register.html">No tengo cuenta</a>
             </form>
-           
         </div>
     </main>
 
