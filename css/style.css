@@ -1,7 +1,7 @@
 * { 
    box-sizing: border-box; 
 }
-	body {
+body {
     margin: 0;
  }	
 ul, ol {
@@ -63,16 +63,15 @@ h1 {
     width: 65%;
     height: 40%;
     border-radius: 8px;
-    border: none;
     color: #F5E6CC;
     background-color: #F5E6CC;
     align-self: center;
     margin-right: 2px;
-
+    border: 2px solid #D4A373;
 }
 .boton-header {
-    width: 29%;
-    height: 47%;
+    width: 28%;
+    height: 45%;
     border-radius: 8px;
     border: none;
     background-color: #1B4D3E;
@@ -161,7 +160,7 @@ input {
     margin: 5px 5px 10px 5px;
     height: auto;
     padding: 10px;
-    border: 4px solid  #1B4D3E;
+    border: 4px solid  #D4A373;
     background-color: #EAD2AC;
     border-radius: 12px;
 }
