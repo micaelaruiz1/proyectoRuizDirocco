@@ -72,27 +72,30 @@
             </ul>
         </nav>
 
+        <div class="container-form">
+            <h2 class="top">REGISTRATE</h2>
+            <form class="form-register" action="./login.html" method="get">
+                <label class="titulo" for="email">Email</label>
+                <input class="cajita" type="email" name="email" id="email" placeholder="Email" required>
+                <p class="obl">Obligatorio</p>
+
+                <label class="titulo" for="password">Password</label>
+                <input class="cajita" type="password" name="password" id="password" placeholder="Password" required>
+                <p class="obl">Obligatorio</p>
+
+                <label class="titulo" for="repeat-password">Repetir password</label>
+                <input class="cajita" type="repeat-password" name="repeat-password" id="Repeat-password" placeholder="Repetir password" required>
+                <p class="obl">Obligatorio</p>
+
+                <label for="terminos"> <input class="terminos"  type="checkbox" name="terminos" id="terminos">Acepto los terminos y condiciones</label>
+
+                <section class="button">
+                    <button class="submit" type="submit">Registrarme</button>
+                    <a class="obl" href="./login.html">Ya tengo una cuenta</a>
+                </section>
+            </form>
+        </div>
         
-        <form class="form-register" action="./login.html" method="get">
-            <label class="titulo" for="email">Email</label>
-            <input class="cajita" type="email" name="email" id="email" placeholder="Email" required>
-            <p class="obl">Obligatorio</p>
-
-            <label class="titulo" for="password">Password</label>
-            <input class="cajita" type="password" name="password" id="password" placeholder="Password" required>
-            <p class="obl">Obligatorio</p>
-
-            <label class="titulo" for="repeat-password">Repetir password</label>
-            <input class="cajita" type="repeat-password" name="repeat-password" id="Repeat-password" placeholder="Repetir password" required>
-            <p class="obl">Obligatorio</p>
-
-            <label for="terminos"> <input class="terminos"  type="checkbox" name="terminos" id="terminos">Acepto los terminos y condiciones</label>
-
-            <section class="button">
-                <button class="submit" type="submit">Registrarme</button>
-                <a class="obl" href="./login.html">Ya tengo una cuenta</a>
-            </section>
-        </form>
     </main>
 
     <footer>
