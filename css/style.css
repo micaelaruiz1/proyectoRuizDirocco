@@ -355,7 +355,7 @@ footer {
 
 @media(max-width: 450px) {
     .main-index {
-            width: 100vw;
+        width: 100vw;
     }
     .section-header1 {
         display: flex;
