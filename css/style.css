@@ -19,7 +19,7 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    width: 100vw;  
+    width: 100vw;
 }
 .section-header1{
     display: flex;
@@ -419,6 +419,7 @@ footer {
     }
     .productos-top {
         width: 146.5px;
+        padding: 8px;
     }
     h4 {
         margin-bottom: 0;
@@ -432,12 +433,17 @@ footer {
     }
    .productos-aleatorios {
         width: 146.5px;
+        padding: 8px;
     }
     .imagen-aleatorios {
         height: 130px;
     }
    .productos-categoria {
         width: 146.5px;
+        padding: 8px;
+    }
+    .imagen-categorias {
+        height: 140px;
     }
     .form-register {
         width: 310px;
