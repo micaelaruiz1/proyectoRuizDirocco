@@ -1,0 +1,61 @@
+// mas de tres caracteres en el campo de busqueda
+let respBusqueda = document.querySelector('.busq-header')
+let botonBuscar = document.querySelector('.boton-header')
+
+botonBuscar.addEventListener('submit', function(e) {
+    let texto = respBusqueda.value
+    if (texto == "") {
+        e.preventDefault();
+        alert("El campo de búsqueda está vacío")
+    }else if (texto.length < 3) {
+        e.preventDefault();
+        alert("El término debe tener al menos 3 caracteres")
+    }
+})
+
+
+// aparecen las categorias de la api
+let categoria = document.querySelector('.ul2')
+let urlCategorias = `https://dummyjson.com/products/category-list`
+fetch (urlCategorias)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data) // DATA SERIA LA LISTA
+        categoria.innerHTML = ""
+        for (let i = 0; i < data.length; i++) {
+            categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
+        }})
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+
+
+// productos no estaticos en el home
+let catalogoTop = document.querySelector('.catalogo-top')
+let urlCatalogo = `https://dummyjson.com/products?limit=10&sortBy=rating&order=desc`
+fetch (urlCatalogo)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data) // DATA SERIA UN OBJETO DE PRODUCTOS
+        let productos = data.products // lista de objetos
+        for (let i = 0; i < 10; i++) {
+            catalogoTop.innerHTML += `
+            <article class="productos-top">
+                <img class="imagen-top" src=${productos[i].thumbnail} alt=${productos[i].title}>
+                <h4 class="titulo-producto">${productos[i].title}</h4>
+                <p class="p-producto">${productos[i].description}</p>
+                <p class="p-producto"><strong>Precio:</strong> ${productos[i].price}</p>
+                <a class="ver-detalle" href="./product.html">Ver detalle</a>
+            </article>`
+        }})
+    .catch(function(error) {
+        console.log("Error: " + error);
+    })
+
+
+
