@@ -1,8 +1,8 @@
 // mas de tres caracteres en el campo de busqueda
 let respBusqueda = document.querySelector('.busq-header')
-let botonBuscar = document.querySelector('.boton-header')
+let formulario = document.querySelector('.formulario')
 
-botonBuscar.addEventListener('submit', function(e) {
+formulario.addEventListener('submit', function(e) {
     let texto = respBusqueda.value
     if (texto == "") {
         e.preventDefault();
