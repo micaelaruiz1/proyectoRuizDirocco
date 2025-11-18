@@ -32,3 +32,34 @@ fetch (urlCategorias)
     .catch(function(error) {
         console.log("Error: " + error);
     })
+
+
+let formulariologin = document.querySelector('.form-register')
+let inputEmail = document.querySelector('#email')
+let inputPassword = document.querySelector('#password')
+let inputRepeatPassword = document.querySelector('#repeat-password')
+let checkapectoterminos = document.querySelector('#terminos')
+
+formulariologin.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let email = inputEmail.value
+    let password = inputPassword.value
+    let repeatpassword = inputRepeatPassword.value
+    
+
+    if (email == "") {
+        alert("El campo de email está vacío.")
+    }else if (password == "") {
+        alert("El campo password está vacío.")
+    }else if (password.length < 6) {
+        alert("La contraseña debe tener al menos 6 caracteres")
+    }else if (password !== repeatpassword) {
+        alert("Las contraseñas no coinciden")
+    
+    }else{
+        localStorage.setItem('email', email)
+        localStorage.setItem('password', password)
+        this.submit()
+    }
+})
