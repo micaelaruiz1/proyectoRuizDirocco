@@ -3,13 +3,15 @@ let respBusqueda = document.querySelector('.busq-header')
 let formulario = document.querySelector('.formulario')
 
 formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
     let texto = respBusqueda.value
     if (texto == "") {
-        e.preventDefault();
         alert("El campo de búsqueda está vacío")
     }else if (texto.length < 3) {
-        e.preventDefault();
+       
         alert("El término debe tener al menos 3 caracteres")
+    }else{
+        this.submit()
     }
 })
 

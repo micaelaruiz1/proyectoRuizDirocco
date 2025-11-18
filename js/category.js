@@ -64,7 +64,7 @@ fetch (urlCatalogoCategorias )
                 <h4 class="titulo-producto">${productos[i].title}</h4>
                 <p class="p-producto">${productos[i].price}</p>
                 <p class="p-producto"><strong>Precio:</strong> ${productos[i].price}</p>
-                <a class="ver-detalle" href="./product.html">Ver detalle</a> 
+                <a class="ver-detalle" href="./product.html?id=${productos[i].id}">Ver detalle</a>
             </article>
             `
         }}) 
