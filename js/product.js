@@ -54,7 +54,6 @@ fetch (urlCatalogoA)
                     <p class="product-reviews">${data.description}</p>
                     <ul> 
                         <li class="product-reviews"><strong>Marca: </strong> ${data.brand}</li>
-                        <li class="product-reviews"><strong>Descripción: </strong> ${data.description}</li>
                         <li class="product-reviews"><strong>Precio: </strong> $${data.price}</li>
                         <li class="product-reviews"><strong> Stock: </strong> $${data.stock}</li>
                         <li class="product-reviews">
