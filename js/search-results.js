@@ -6,24 +6,23 @@ let queryString = location.search
 let queryStringObj = new URLSearchParams(queryString)
 let textoUsuario = queryStringObj.get('busqueda')
 
-buscarProductos(textoUsuario) //ir a lo que ya se busco
+buscarProductos(textoUsuario) 
 
-// si se quiere volver a buscar:
-// mas de tres caracteres en el campo de busqueda
+
 formulario.addEventListener('submit', function(e) {
     e.preventDefault()
-    let texto = respBusqueda.value //saco el valor del input
+    let texto = respBusqueda.value 
     if (texto == "") {
         alert("El campo de búsqueda está vacío")
     }else if (texto.length < 3) {
        
         alert("El término debe tener al menos 3 caracteres")
     }else{
-        window.location.href = `search-results.html?busqueda=${texto}` // se vuelve a esta pagina y se ejecuta la funcion
+        window.location.href = `search-results.html?busqueda=${texto}` 
     }
 })
 
-// que el usuario busque algo y sea dinamico
+
 function buscarProductos (texto){
     let urlSearch = `https://dummyjson.com/products/search?q=${texto}`
     fetch (urlSearch)
@@ -31,8 +30,8 @@ function buscarProductos (texto){
             return response.json()
         })
         .then(function(data) {
-            console.log(data) // DATA SERIA UN OBJETO DE PRODUCTOS
-            let productos = data.products // lista de objetos
+            console.log(data) 
+            let productos = data.products 
 
             if (productos.length === 0) {
                 catalogoSearch.innerHTML = `
@@ -62,8 +61,6 @@ function buscarProductos (texto){
 }
 
 
-
-// aparecen las categorias de la api
 let categoria = document.querySelector('.ul2')
 let urlCategorias = `https://dummyjson.com/products/category-list`
 fetch (urlCategorias)
@@ -71,7 +68,7 @@ fetch (urlCategorias)
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA LA LISTA
+        console.log(data) 
         categoria.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`

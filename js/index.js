@@ -1,4 +1,3 @@
-// mas de tres caracteres en el campo de busqueda
 let respBusqueda = document.querySelector('.busq-header')
 let formulario = document.querySelector('.formulario')
 
@@ -16,7 +15,6 @@ formulario.addEventListener('submit', function(e) {
 })
 
 
-// aparecen las categorias de la api
 let categoria = document.querySelector('.ul2')
 let urlCategorias = `https://dummyjson.com/products/category-list`
 fetch (urlCategorias)
@@ -24,7 +22,7 @@ fetch (urlCategorias)
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA LA LISTA
+        console.log(data) 
         categoria.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
@@ -35,18 +33,16 @@ fetch (urlCategorias)
 
 
 
-// productos no estaticos en el home
-// productos top:
 let catalogoTop = document.querySelector('.catalogo-top')
-let urlCatalogo = `https://dummyjson.com/products?limit=10&sortBy=rating&order=desc`
+let urlCatalogo = `https://dummyjson.com/products?sortBy=rating&order=desc`
 fetch (urlCatalogo)
     .then(function(response) {
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA UN OBJETO DE PRODUCTOS
-        let productos = data.products // lista de objetos
-        for (let i = 0; i < productos.length; i++) {
+        console.log(data) 
+        let productos = data.products
+        for (let i = 0; i < 10; i++) {
             catalogoTop.innerHTML += `
             <article class="productos-top">
                 <img class="imagen-top" src=${productos[i].thumbnail} alt=${productos[i].title}>
@@ -61,7 +57,6 @@ fetch (urlCatalogo)
     })
 
 
-// categoria a mi eleccion:
 let catalogoAleatorio = document.querySelector('.catalogo-aleatorio')
 let urlCatalogoA = `https://dummyjson.com/products/category/beauty`
 fetch (urlCatalogoA)
@@ -69,8 +64,8 @@ fetch (urlCatalogoA)
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA UN OBJETO DE PRODUCTOS
-        let productos = data.products // lista de objetos
+        console.log(data) 
+        let productos = data.products 
         for (let i = 0; i < productos.length; i++) {
             catalogoAleatorio.innerHTML += `
             <article class="productos-top">

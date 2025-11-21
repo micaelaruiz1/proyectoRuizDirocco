@@ -1,4 +1,3 @@
-// mas de tres caracteres en el campo de busqueda
 let respBusqueda = document.querySelector('.busq-header')
 let formulario = document.querySelector('.formulario')
 
@@ -16,7 +15,6 @@ formulario.addEventListener('submit', function(e) {
 })
 
 
-// aparecen las categorias de la api
 let categoria = document.querySelector('.ul2')
 let urlCategorias = `https://dummyjson.com/products/category-list`
 fetch (urlCategorias)
@@ -24,7 +22,7 @@ fetch (urlCategorias)
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA LA LISTA
+        console.log(data) 
         categoria.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
@@ -35,7 +33,6 @@ fetch (urlCategorias)
 
 
 
-// cuando aprieto una categoria ya no es estatico
 let queryString = location.search
 console.log (queryString)
 
@@ -54,8 +51,9 @@ fetch (urlCatalogoCategorias )
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA UN OBJETO
-        let productos = data.products // lista de productos (objetos) de una misma categoria
+        console.log(data) 
+        let productos = data.products 
+        
         tituloCatalogo.innerHTML = cat
         for (let i = 0; i < productos.length; i++) {
             seccionCatalogo.innerHTML += `

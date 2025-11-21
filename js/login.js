@@ -1,4 +1,3 @@
-// mas de tres caracteres en el campo de busqueda
 let respBusqueda = document.querySelector('.busq-header')
 let formulario = document.querySelector('.formulario')
 
@@ -16,7 +15,6 @@ formulario.addEventListener('submit', function(e) {
 })
 
 
-// aparecen las categorias de la api
 let categoria = document.querySelector('.ul2')
 let urlCategorias = `https://dummyjson.com/products/category-list`
 fetch (urlCategorias)
@@ -24,7 +22,7 @@ fetch (urlCategorias)
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA LA LISTA
+        console.log(data) 
         categoria.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`

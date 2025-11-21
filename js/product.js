@@ -1,4 +1,3 @@
-// mas de tres caracteres en el campo de busqueda
 let respBusqueda = document.querySelector('.busq-header')
 let formulario = document.querySelector('.formulario')
 
@@ -16,7 +15,6 @@ formulario.addEventListener('submit', function(e) {
 })
 
 
-// aparecen las categorias de la api
 let categoria = document.querySelector('.ul2')
 let urlCategorias = `https://dummyjson.com/products/category-list`
 fetch (urlCategorias)
@@ -24,7 +22,7 @@ fetch (urlCategorias)
         return response.json()
     })
     .then(function(data) {
-        console.log(data) // DATA SERIA LA LISTA
+        console.log(data) 
         categoria.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
@@ -34,12 +32,9 @@ fetch (urlCategorias)
     })
 
 
-
-// que aparezca el producto que apretamos. Solo se va a poder apretar el detalle de un producto en index, category y search
 let queryString = location.search
 let queryStringObj = new URLSearchParams(queryString)
 let id = queryStringObj.get('id')
-
 
 let catalogoAleatorio = document.querySelector('.catalogo')
 let urlCatalogoA = `https://dummyjson.com/products/${id}`
@@ -84,7 +79,6 @@ fetch (urlCatalogoA)
             tagsHTML.innerHTML += `<li class="li1">${data.tags[i]}</li>`
             console.log("tags desde la API:", data.tags);
             }
-
 
             let reviewsHTML = document.querySelector(".product-section2")
             for (let i = 0; i < data.reviews.length; i++) {
