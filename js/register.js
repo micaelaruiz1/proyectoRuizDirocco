@@ -3,7 +3,7 @@ let respBusqueda = document.querySelector('.busq-header')
 let formulario = document.querySelector('.formulario')
 
 formulario.addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault()
     let texto = respBusqueda.value
     if (texto == "") {
         alert("El campo de búsqueda está vacío")
@@ -30,7 +30,7 @@ fetch (urlCategorias)
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
         }})
     .catch(function(error) {
-        console.log("Error: " + error);
+        console.log("Error: " + error)
     })
 
 
@@ -38,7 +38,7 @@ let formulariologin = document.querySelector('.form-register')
 let inputEmail = document.querySelector('#email')
 let inputPassword = document.querySelector('#password')
 let inputRepeatPassword = document.querySelector('#repeat-password')
-let checkapectoterminos = document.querySelector('#terminos')
+let checkTerminos = document.querySelector('#terminos')
 
 formulariologin.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -46,7 +46,6 @@ formulariologin.addEventListener('submit', function(e) {
     let email = inputEmail.value
     let password = inputPassword.value
     let repeatpassword = inputRepeatPassword.value
-    
 
     if (email == "") {
         alert("El campo de email está vacío.")
@@ -56,10 +55,9 @@ formulariologin.addEventListener('submit', function(e) {
         alert("La contraseña debe tener al menos 6 caracteres")
     }else if (password !== repeatpassword) {
         alert("Las contraseñas no coinciden")
-    
+    }else if (checkTerminos.value == "") {
+        alert("Debes aceptar los términos y condiciones.")
     }else{
-        localStorage.setItem('email', email)
-        localStorage.setItem('password', password)
         this.submit()
     }
 })

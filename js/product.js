@@ -30,11 +30,11 @@ fetch (urlCategorias)
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
         }})
     .catch(function(error) {
-        console.log("Error: " + error);
+        console.log("Error: " + error)
     })
 
 
-    
+
 // que aparezca el producto que apretamos. Solo se va a poder apretar el detalle de un producto en index, category y search
 let queryString = location.search
 let queryStringObj = new URLSearchParams(queryString)
@@ -99,5 +99,5 @@ fetch (urlCatalogoA)
                     </article> `} 
     })
     .catch(function(error) {
-        console.log("Error: " + error);
+        console.log("Error: " + error)
     })

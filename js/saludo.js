@@ -1,27 +1,17 @@
 let email = localStorage.getItem('email')
+let navegacion = document.querySelector('.ul1')
 
 if(email){
-    let login = document.querySelector('#lilogin')
-    let registro = document.querySelector('#liregistro')
-    login.style.display = 'none'
-    registro.style.display = 'none'
-
-    let ulcontenedor = document.querySelector('.ul1')
-
-    let li1 = document.createElement('li')
-    li1.classList.add('li1')
-    li1.id = 'bienvenido'
-    li1.textContent = 'Bienvenido:' + email
-
-    let li2 = document.createElement('li')
-    li2.classList.add('li1')
-    li2.id = 'logout'
-    li2.textContent = 'Logout'
-    
-    li2.addEventListener('click', function(){
-        logOut()
-    })
-
-    ulcontenedor.appendChild(li1)
-    ulcontenedor.appendChild(li2)
+    navegacion.innerHTML = `
+    <li class = "top" >Bienvenido/a ${email}</li>
+    <li class="li1"><a class="a-header" href="./index.html">Home</a></li>
+    <li class="li1"><a id="logout" class="a-header" href="#">Logout</a></li>
+    `
+}else{
+    navegacion.innerHTML = `
+    <li class="li1"><a class="a-header" href="./index.html">Home</a></li>
+    <li class="li1"><a class="a-header" href="./login.html">Login</a></li>
+    <li class="li1"><a class="a-header" href="./register.html">Registro</a></li>
+    `
 }
+

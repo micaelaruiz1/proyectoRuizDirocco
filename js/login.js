@@ -30,7 +30,7 @@ fetch (urlCategorias)
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
         }})
     .catch(function(error) {
-        console.log("Error: " + error);
+        console.log("Error: " + error)
     })
 
 
@@ -39,7 +39,7 @@ let inputEmail = document.querySelector('#email')
 let inputPassword = document.querySelector('#password')
 
 formulariologin.addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault()
     
     let email = inputEmail.value
     let password = inputPassword.value
@@ -51,7 +51,6 @@ formulariologin.addEventListener('submit', function(e) {
         alert("El campo password debe tener al menos 6 caracteres.")
     }else{
         localStorage.setItem('email', email)
-        localStorage.setItem('password', password)
         this.submit()
     }
 })

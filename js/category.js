@@ -30,7 +30,7 @@ fetch (urlCategorias)
             categoria.innerHTML += `<li class='li2'><a href='./category.html?Categorias=${data[i]}'>${data[i]}</a></li>`
         }})
     .catch(function(error) {
-        console.log("Error: " + error);
+        console.log("Error: " + error)
     })
 
 
@@ -69,6 +69,6 @@ fetch (urlCatalogoCategorias )
             `
         }}) 
     .catch(function(error) {
-        console.log("Error: " + error);
+        console.log("Error: " + error)
     })
 

@@ -81,6 +81,7 @@ h1 {
 .ul1 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -143,7 +144,7 @@ h1 {
 }
 .top {
     color:  #C87B5C;
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px;
 }
 .catalogo-top {
